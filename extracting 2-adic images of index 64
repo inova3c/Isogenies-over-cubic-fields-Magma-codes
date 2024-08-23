@@ -1,0 +1,17 @@
+//we look to extract images of index 64
+
+load "gl2data.txt";
+
+finelist:=[* *];
+
+for i in [1 .. 727] do
+	if newsublist[i][1] eq 64 then 
+		Append(~finelist, i);	
+	end if;
+end for;
+
+finelist;
+//439, 440, 441
+
+//however, none of the groups are defined mod 8, so their index after reducing mod 8 is less than 64
+
