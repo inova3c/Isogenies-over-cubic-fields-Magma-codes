@@ -30,8 +30,8 @@ end for;
 
 j5:=
 
-//result: f9 factorises into polynomials of degrees 3 and 9,
-//f12 factorises into polynomials of degrees 9 and 27, for all j
+//result: f9 factors into polynomials of degrees 3 and 9,
+//f12 factors into polynomials of degrees 9 and 27, for all j
 
 
 
