@@ -1,0 +1,45 @@
+load "gl2data.txt";
+//we will search through the database of possible images of 2-adic representations by Zureick and Brown
+//we search for subgroups whose index after reducing mod 4 equals 12 or 6, and for which there 
+finelist:=[Integers()|];
+GG:=GL(2, Integers(4));
+
+
+//we don't need the images defined mod 2
+
+for i in [1 .. 727] do
+	H:=newsublist[i][3];
+	if CoefficientRing(H) ne Integers(2) then
+		Append(~finelist, i);
+	end if;
+end for;
+
+
+order12list:=[Integers()|];
+for i in finelist do
+	H:=newsublist[i][3];
+	H1:=ChangeRing(H, Integers(4));
+	if Order(H1) eq 12 then 
+		Append(~order12list, i);
+	end if; 
+end for;
+
+order12list; 
+//20, 21, 180
+
+order6list:=[Integers()|];
+for i in finelist do
+	H:=newsublist[i][3];
+	H1:=ChangeRing(H, Integers(4));
+	if Order(H1) eq 6 then 
+		Append(~order6list, i);
+	end if; 
+end for;
+order6list;
+//empty
+
+
+
+
+
+
