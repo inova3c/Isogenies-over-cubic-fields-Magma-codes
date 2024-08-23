@@ -1,0 +1,46 @@
+R<x,y>:=PolynomialRing(Rationals(), 2);
+f27:=ClassicalModularPolynomial(27);
+f9:=ClassicalModularPolynomial(9);
+
+jlist21:=[-189613868625/128, -1159088625/2097152, -140625/8, 3375/2];
+jlist15:=[-349938025/8, -121945/32, -25/2, 46969655/32768];
+for j in jlist21 do 
+	Factorisation(Evaluate(f9, [x,j]));	
+end for;
+
+for j in jlist21 do
+	Factorisation(Evaluate(f27, [x,j]));
+end for;
+
+for j in jlist15 do 
+	Factorisation(Evaluate(f9, [x,j]));	
+end for;
+
+for j in jlist15 do
+	Factorisation(Evaluate(f27, [x,j]));
+end for;
+
+f25:=ClassicalModularPolynomial(25);
+Degree(f25);
+
+for j in jlist15 do 
+	Factorisation(Evaluate(f25, [x,j]));	
+end for;
+
+
+j5:=
+
+//result: f9 factorises into polynomials of degrees 3 and 9,
+//f12 factorises into polynomials of degrees 9 and 27, for all j
+
+
+
+j1:=-189613868625/128;
+j2:=-1159088625/2097152;
+j3:=-140625/8;
+j4:=3375/2;
+f9;
+S<x>:=PolynomialRing(Rationals(), 1);
+g:=f9(x,j1);
+g;
+Factorization(f9(x,j2));

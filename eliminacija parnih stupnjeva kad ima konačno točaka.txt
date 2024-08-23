@@ -1,0 +1,64 @@
+R<x,y>:=PolynomialRing(Rationals(), 2);
+S<x>:=PolynomialRing(Rationals(), 1);
+f27:=ClassicalModularPolynomial(27);
+f9:=ClassicalModularPolynomial(9);
+
+jlist21:=[-189613868625/128, -1159088625/2097152, -140625/8, 3375/2];
+jlist15:=[-349938025/8, -121945/32, -25/2, 46969655/32768];
+jlist37:=[-7*11^3, -7*137^3*2083^3];
+jlist17:=[-17*373^3/2^17, -17^2*101^3/2];
+jlist11:=[-11*131^3, -11^2];
+//ovo rješava 2*63
+
+for j in jlist21 do 
+	factors:=Factorisation(Evaluate(f9, [x,j]));
+	F:=SplittingField(UnivariatePolynomial(factors[1][1]));	
+	E:=EllipticCurveFromjInvariant(j);
+	E1:=WeierstrassModel(E);
+	s:=DefiningPolynomial(E1);
+	m:=Evaluate(s, [x,0,1]);
+	G:=SplittingField(UnivariatePolynomial(m));
+	if (G ne F) then
+		print "AAA"; 
+	end if;
+end for;
+
+//ovo rješava 2*45
+
+for j in jlist15 do 
+	factors:=Factorisation(Evaluate(f9, [x,j]));
+	F:=SplittingField(UnivariatePolynomial(factors[1][1]));	
+	E:=EllipticCurveFromjInvariant(j);
+	E1:=WeierstrassModel(E);
+	s:=DefiningPolynomial(E1);
+	m:=Evaluate(s, [x,0,1]);
+	G:=SplittingField(UnivariatePolynomial(m));
+	if (G ne F) then
+		print "AAA"; 
+	end if;	
+end for;
+f4:=ClassicalModularPolynomial(4);
+
+
+
+for j in jlist37 do 
+	factors:=Factorisation(Evaluate(f4, [x,j]));
+	factors;
+end for;
+
+for j in jlist17 do 
+	factors:=Factorisation(Evaluate(f4, [x,j]));
+	factors;
+end for;
+
+for j in jlist11 do 
+	factors:=Factorisation(Evaluate(f4, [x,j]));
+	factors;
+end for;
+
+S<x,y>:=FieldOfFractions(R);
+
+j5:=(y^2+10*y+5)^3/y;
+
+p4:=Evaluate(f4, [x, j5]);
+p4;
