@@ -27,20 +27,8 @@ for j in jlist15 do
 	Factorisation(Evaluate(f25, [x,j]));	
 end for;
 
-
-j5:=
-
 //result: f9 factors into polynomials of degrees 3 and 9,
 //f12 factors into polynomials of degrees 9 and 27, for all j
 
 
 
-j1:=-189613868625/128;
-j2:=-1159088625/2097152;
-j3:=-140625/8;
-j4:=3375/2;
-f9;
-S<x>:=PolynomialRing(Rationals(), 1);
-g:=f9(x,j1);
-g;
-Factorization(f9(x,j2));
