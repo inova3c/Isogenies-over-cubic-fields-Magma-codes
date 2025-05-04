@@ -1,0 +1,16 @@
+# Code for [Paper Title or Project Name]
+
+This repository contains Magma code related to the computations in the paper:
+Degrees of isogenies over prime degree number fields of non-CM elliptic curves with rational j-invariant
+https://arxiv.org/abs/2411.03062
+
+## Requirements
+The version of Magma that was used is V2.28-3
+
+## Running the Code
+
+The code is organized as follows:
+
+
+
+
